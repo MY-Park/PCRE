@@ -93,10 +93,6 @@ int main(int argc, char *argv[])
 
 	fscanf_s(fp, "%d", &num);
 	fgetc(fp);
-
-	//PCRE2_SPTR pattern = (PCRE2_SPTR)"\[(?>[1-9]|[12][0-9]|30)\/Apr\/2018\]\\s\D?GET\\s\/admin"; // write regular expression here
-	//PCRE2_SPTR pattern = (PCRE2_SPTR)"(?>\\d| |.|-)\\[(?>[1-9]|30)\/"; // write regular expression here
-	//PCRE2_SPTR pattern = (PCRE2_SPTR)"(?>\\d| |.|-)\\[(?>[1-2][0-9]|30|[1-9])\/Apr\/2018\]\\s\"GET\\s\/admin\\s"; // write regular expression here
 	PCRE2_SPTR pattern3 = (PCRE2_SPTR)"424D(?>\\d|\\w){32}5000000046000000(?>\\d|\\w){44}$"; // write regular expression here
 	while (num--)
 	{
